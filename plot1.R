@@ -1,9 +1,18 @@
+## This R script will create Plot1 of he Assignment 1,
+## Global Active Power usage between 2007-02-01 and 2007-02-02
+## The print statements provide a clue as to what steps are
+## to be executed.
+##
+## The datafile must already exist in a relative directory "../data"
+##
+## To execute:  > source("plot1.R")
+
 print("Set the beginning and ending dates to filter data.")
 dateStart <- as.Date("2007-02-01", format = "%Y-%m-%d")
 dateEnd <- as.Date("2007-02-02", format = "%Y-%m-%d")
 
 print("Reading Data File ...")
-dfHpcOrig <- read.csv2("household_power_consumption.txt", sep = ";", as.is = TRUE)
+dfHpcOrig <- read.csv2("../data/household_power_consumption.txt", sep = ";", as.is = TRUE)
 print("Reading Data File - Done")
 
 print("Make copy of original data to work with")
